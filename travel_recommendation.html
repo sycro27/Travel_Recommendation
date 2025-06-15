@@ -105,8 +105,52 @@
     }
 
     #results {
-      padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+    .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 100px;
+    margin: 50px auto;
+    border-radius: 10px;
+    max-width: 900px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .card img {
+    width: 600px;
+    height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .card-text {
+    max-width: 500px;
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column;
+      text-align: center;
     }
+
+    .card img {
+      width: 100%;
+    }
+  }
   </style>
 </head>
 <body>
@@ -114,13 +158,13 @@
   <nav>
     <div class="logo">✈️ TravelBloom</div>
     <div class="nav-links">
-      <a href="index.html">Home</a>
+      <a href="travel_recommendation.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="contact.html">Contact Us</a>
     </div>
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Enter a destination or keyword" />
-      <button onclick="search()">Search</button>
+      <button onclick="searchRecommendation()">Search</button>
       <button onclick="clearResults()">Clear</button>
     </div>
   </nav>

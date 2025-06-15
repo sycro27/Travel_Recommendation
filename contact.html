@@ -1,13 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - TravelBloom</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 30px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.nav-links {
+   color: white;
+  justify-self: center;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+    .social-icons {
+      position: absolute;
+      top: 40%;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .social-icons img {
+      width: 30px;
+    }
+
+    .contact-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 80px); /* Adjust for navbar height */
+      text-align: center;
+    }
+
+    .contact-section h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .contact-section form {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      border-radius: 10px;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+      padding: 10px;
+      border-radius: 4px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .contact-section button {
+      background-color: #00cc99;
+      padding: 12px;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .contact-section form {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <nav class="navbar">
+  <nav>
     <div class="logo">✈️ TravelBloom</div>
     <div class="nav-links">
       <a href="travel_recommendation.html">Home</a>
@@ -16,7 +127,7 @@
     </div>
   </nav>
 
-    <div class="social-icons">
+  <div class="social-icons">
     <a href="#"><img src="facebook.png" alt="Facebook" /></a>
     <a href="#"><img src="instagram.jpg" alt="Instagram" /></a>
     <a href="#"><img src="youtube.png" alt="YouTube" /></a>
@@ -24,15 +135,14 @@
   </div>
 
   <section class="contact-section">
-  <h1>CONTACT US</h1>
-  <form>
-    <input type="text" placeholder="Name" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Message" required></textarea>
-    <button type="submit">Submit</button>
-  </form>
-</section>
-
+    <h1>CONTACT US</h1>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message" rows="5" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
 
 </body>
 </html>

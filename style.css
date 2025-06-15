@@ -1,4 +1,3 @@
-/* Shared section styling for About and Contact pages */
 .about-section, .contact-section {
   height: 100vh;
   background: url('bg.jpg') no-repeat center center fixed;
